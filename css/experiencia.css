@@ -1,0 +1,112 @@
+.experiencia .subtitulo {
+  color: var(--c3);
+}
+
+.experiencia-texto {
+  /* É uma boa prática limitar a largura do texto para facilitar a leitura */
+  max-width: 40ch;
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: var(--c10);
+  margin-bottom: 60px;
+}
+
+.experiencia-texto strong {
+  color: var(--c13);
+}
+
+.empresa {
+  background-color: var(--c1);
+  border-radius: 4px;
+  padding: 1.25rem;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem 1.25rem;
+  position: relative;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#bcf829, #c7dd0a);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.empresa-ano {
+  /* com o position absolute não da pra alinhar o texto a direita */
+  /* pois ele só ocupa exatamente o tamanho do conteúdo */
+  /* a forma de contornar é aumentar a largura mais que o maior item */
+  /* e aí sim alinhar */
+  position: absolute;
+  top: 22px;
+  left: -100px;
+  text-align: right;
+  width: 80px;
+  color: var(--c10);
+  font-size: 0.875rem;
+}
+
+.empresa-titulo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.empresa-texto {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--c10);
+}
+
+.empresa-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  align-content: start;
+}
+
+.empresa-habilidades li {
+  background-color: white;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    /* gap: 40px; */
+  }
+
+  .experiencia .subtitulo {
+    color: var(--c13);
+  }
+
+  .experiencia-texto {
+    font-size: 1.25rem;
+    max-width: 60ch;
+  }
+
+  .empresa-ano {
+    position: initial; /* volta o item para a posição inicial */
+    width: initial; /* retira a width definida anteriormente */
+    order: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+
+  span.empresa-titulo {
+    font-weight: normal;
+  }
+}

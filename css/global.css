@@ -1,0 +1,60 @@
+:root {
+  --c1: #f5f5f5;
+  --c3: #e0e0e0;
+  --c4: #cccccc;
+  --c6: #a3a3a3;
+  --c7: #8f8f8f;
+  --c10: #525252;
+  --c13: #141414;
+}
+
+body {
+  font-family: "Fira Sans", Arial, sans-serif;
+  color: var(--c13);
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid-template {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px 140px;
+  /* align-items: center; */
+}
+
+.subtitulo {
+  font-size: 9rem;
+  line-height: 1;
+  word-break: break-all;
+  text-transform: uppercase;
+  max-width: 4ch;
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important; /* Para sobrepor o 5ch do subtitulo formacao */
+  }
+}

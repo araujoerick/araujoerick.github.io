@@ -1,0 +1,38 @@
+.header {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Vai centralizar os botões enquanto for quebrando */
+  gap: 10px;
+}
+
+.header-menu a {
+  font-size: 1.125rem; /* 18 / 16 = 1.125*/
+  text-decoration: none;
+  color: var(--c13);
+  padding: 10px 20px;
+  /* display block para pegar corretamente os valores de padding */
+  display: block;
+}
+
+/* max-width == menor do quê < 800px */
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .header-menu a {
+    background-color: var(--c1);
+    border-radius: 4px;
+  }
+}
